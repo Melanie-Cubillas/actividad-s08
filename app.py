@@ -82,7 +82,7 @@ def buscar_similares(embedding, k=5):
 def generar_respuesta(pregunta: str, contextos: list[dict]) -> str:
     """Usa Gemini para responder con contexto recuperado (RAG)."""
     contexto = "\n\n".join([c["texto"] for c in contextos])
-    prompt = f"""Eres un asistente experto. Usa EXCLUSIVAMENTE el siguiente contexto para responder la pregunta del usuario. Si la respuesta no está en el contexto, indícalo claramente.
+    prompt = f"""Eres un asistente experto sobre IA generativa y los problemas que existen con la creatividad. Usa EXCLUSIVAMENTE el siguiente contexto para responder la pregunta del usuario. Si la respuesta no está en el contexto, indícalo claramente.
 
 Contexto:
 {contexto}
