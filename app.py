@@ -27,7 +27,7 @@ def get_genai_client():
 @st.cache_resource
 def get_mongo_collection():
     client = pymongo.MongoClient(MONGODB_URI)
-    db = client["pdf_embeddings_db"]
+    db = client["pdf_embeddings_db1"]
     return db["pdf_vectors"]
 
 client_genai = get_genai_client()
